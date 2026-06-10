@@ -2,10 +2,10 @@ import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 
 function CaravanaForm() {
-  // Configuración de Formspree (reemplaza con tu ID correspondiente)
+  
   const [state, handleSubmit] = useForm("xeewkqyl");
 
-  // Si el formulario se envía con éxito, muestra este mensaje limpio
+  
   if (state.succeeded) {
     return (
       <div className="success-container">
@@ -18,7 +18,7 @@ function CaravanaForm() {
     <form onSubmit={handleSubmit}>
       <h2>Formulario de Caravanas a Bebé</h2>
 
-      {/* DATOS DE LA BEBÉ */}
+      
       <fieldset>
         <legend>Datos de la Bebé</legend>
 
@@ -53,7 +53,7 @@ function CaravanaForm() {
         </label>
       </fieldset>
 
-      {/* ADULTO RESPONSABLE */}
+      
       <fieldset>
         <legend>Datos del Adulto Responsable</legend>
 
@@ -78,7 +78,7 @@ function CaravanaForm() {
         </label>
       </fieldset>
 
-      {/* SOBRE LAS CARAVANAS */}
+      
       <fieldset>
         <legend>Sobre las Caravanas</legend>
 
@@ -96,7 +96,7 @@ function CaravanaForm() {
         </label>
       </fieldset>
 
-      {/* CONSENTIMIENTO INFORMADO */}
+      
       <fieldset>
         <legend>Consentimiento Informado</legend>
 
@@ -106,7 +106,7 @@ function CaravanaForm() {
         </label>
       </fieldset>
 
-      {/* FIRMA DIGITAL */}
+      
       <fieldset>
         <legend>Firma</legend>
         <label>
@@ -115,7 +115,7 @@ function CaravanaForm() {
         </label>
       </fieldset>
 
-      {/* Gestión de errores de envío */}
+      
       <ValidationError prefix="Error" errors={state.errors} />
 
       <button type="submit" className="submit-btn" disabled={state.submitting}>
