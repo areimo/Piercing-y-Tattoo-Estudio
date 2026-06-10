@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 
 function PiercingForm() {
-  // Estado para controlar si es menor o mayor de edad
+  
   const [esMenor, setEsMenor] = useState(false);
   
-  // Configuración de Formspree (reemplaza con tu ID correspondiente)
+  
   const [state, handleSubmit] = useForm("xzdqgbnv");
 
-  // Si el formulario se envía con éxito, muestra este mensaje limpio
+  
   if (state.succeeded) {
     return (
       <div className="success-container">
@@ -21,7 +21,7 @@ function PiercingForm() {
     <form onSubmit={handleSubmit}>
       <h2>Formulario de Piercing</h2>
 
-      {/* SELECCIÓN DE EDAD */}
+      
       <fieldset>
         <legend>Tipo de Cliente</legend>
         <label className="radio-label">
@@ -46,7 +46,7 @@ function PiercingForm() {
         </label>
       </fieldset>
 
-      {/* DATOS DEL CLIENTE / MENOR */}
+      
       <fieldset>
         <legend>{esMenor ? 'Datos del Menor' : 'Datos del Cliente'}</legend>
 
@@ -89,7 +89,7 @@ function PiercingForm() {
         )}
       </fieldset>
 
-      {/* DATOS DEL ADULTO RESPONSABLE (SOLO MENORES) */}
+      
       {esMenor && (
         <fieldset>
           <legend>Datos del Adulto Responsable</legend>
@@ -111,7 +111,7 @@ function PiercingForm() {
         </fieldset>
       )}
 
-      {/* DATOS DEL PIERCING */}
+      
       <fieldset>
         <legend>Datos del Piercing</legend>
 
@@ -137,7 +137,7 @@ function PiercingForm() {
         </label>
       </fieldset>
 
-      {/* INFORMACIÓN MÉDICA */}
+      
       <fieldset>
         <legend>{esMenor ? 'Información Médica del Menor' : 'Información Médica Relevante'}</legend>
 
@@ -167,7 +167,7 @@ function PiercingForm() {
         </label>
       </fieldset>
 
-      {/* CONSENTIMIENTO INFORMADO */}
+      
       <fieldset>
         <legend>Consentimiento Informado</legend>
 
@@ -197,7 +197,7 @@ function PiercingForm() {
         </label>
       </fieldset>
 
-      {/* FIRMAS DIGITALES */}
+      
       <fieldset>
         <legend>Firmas</legend>
         
@@ -225,7 +225,7 @@ function PiercingForm() {
         )}
       </fieldset>
 
-      {/* Gestión de errores de envío */}
+      
       <ValidationError prefix="Error" errors={state.errors} />
 
       <button type="submit" className="submit-btn" disabled={state.submitting}>
