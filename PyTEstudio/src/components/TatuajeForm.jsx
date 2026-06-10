@@ -2,10 +2,10 @@ import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 
 function TatuajeForm() {
-  // Configuración de Formspree (reemplaza con tu ID correspondiente)
+  
   const [state, handleSubmit] = useForm("xlgkneqb ");
 
-  // Si el formulario se envía con éxito, muestra este mensaje limpio
+  
   if (state.succeeded) {
     return (
       <div className="success-container">
@@ -18,7 +18,7 @@ function TatuajeForm() {
     <form onSubmit={handleSubmit}>
       <h2>Formulario de Tatuajes</h2>
 
-      {/* DATOS DEL CLIENTE */}
+      
       <fieldset>
         <legend>Datos del Cliente</legend>
 
@@ -48,7 +48,7 @@ function TatuajeForm() {
         </label>
       </fieldset>
 
-      {/* INFORMACIÓN DEL TATUAJE */}
+      
       <fieldset>
         <legend>Información del Tatuaje</legend>
 
@@ -77,7 +77,7 @@ function TatuajeForm() {
         </label>
       </fieldset>
 
-      {/* CARACTERÍSTICAS */}
+      
       <fieldset>
         <legend>Características del Diseño</legend>
 
@@ -102,7 +102,7 @@ function TatuajeForm() {
         </label>
       </fieldset>
 
-      {/* HISTORIAL MÉDICO */}
+    
       <fieldset>
         <legend>Historial Médico</legend>
 
@@ -122,7 +122,7 @@ function TatuajeForm() {
         </label>
       </fieldset>
 
-      {/* CONSENTIMIENTO */}
+      
       <fieldset>
         <legend>Consentimiento Informado</legend>
 
@@ -142,7 +142,7 @@ function TatuajeForm() {
         </label>
       </fieldset>
 
-      {/* FIRMA */}
+      
       <fieldset>
         <legend>Firma Digital</legend>
         <label>
@@ -151,7 +151,7 @@ function TatuajeForm() {
         </label>
       </fieldset>
 
-      {/* Gestión de errores de envío */}
+      
       <ValidationError prefix="Error" errors={state.errors} />
 
       <button type="submit" className="submit-btn" disabled={state.submitting}>
