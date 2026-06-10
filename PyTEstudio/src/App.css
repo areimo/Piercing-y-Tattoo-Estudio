@@ -217,15 +217,14 @@
 }
 
 
-/* Esto va a agrupar y posicionar la sección completa en la pantalla */
 section.contact {
   position: fixed !important;
   right: 25px !important;
-  bottom: 0px !important; /* Distancia desde abajo */
-  z-index: 9999 !important; /* Para que quede siempre por encima de todo */
+  bottom: 0px !important; 
+  z-index: 9999 !important; 
 
   display: flex !important;
-  flex-direction: column !important; /* Fuerza a que se pongan uno ABAJO del otro */
-  gap: 15px !important; /* Espacio de separación entre los dos botones */
+  flex-direction: column !important; 
+  gap: 15px !important; 
   align-items: center !important;
 }
