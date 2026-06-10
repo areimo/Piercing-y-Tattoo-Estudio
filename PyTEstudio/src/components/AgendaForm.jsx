@@ -2,10 +2,10 @@ import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 
 function AgendaForm() {
-  // Configuración de Formspree (reemplaza con tu ID correspondiente)
+  
   const [state, handleSubmit] = useForm("maqzjyrq");
 
-  // Si el formulario se envía con éxito, muestra este mensaje limpio
+  
   if (state.succeeded) {
     return (
       <div className="success-container">
@@ -19,7 +19,7 @@ function AgendaForm() {
 
       <h2>Ficha Digital de Solicitud de Turno</h2>
 
-      {/* DATOS PERSONALES */}
+      
       <fieldset>
         <legend>Datos Personales</legend>
 
@@ -63,7 +63,7 @@ function AgendaForm() {
         </label>
       </fieldset>
 
-      {/* SELECCIÓN DE ESTUDIO */}
+      
       <fieldset>
         <legend>Selección de Estudio</legend>
 
@@ -87,7 +87,7 @@ function AgendaForm() {
         </label>
       </fieldset>
 
-      {/* INFORMACIÓN DEL SERVICIO */}
+      
       <fieldset>
         <legend>Información del Servicio</legend>
 
@@ -129,7 +129,7 @@ function AgendaForm() {
         </label>
       </fieldset>
 
-      {/* DÍA Y HORA */}
+      
       <fieldset>
         <legend>Día y Hora Acordada</legend>
         <input
@@ -139,7 +139,7 @@ function AgendaForm() {
         />
       </fieldset>
 
-      {/* FORMA DE PAGO */}
+      
       <fieldset>
         <legend>Forma de Pago</legend>
 
@@ -163,7 +163,7 @@ function AgendaForm() {
         </label>
       </fieldset>
 
-      {/* DECLARACIÓN */}
+      
       <fieldset>
         <legend>Declaración</legend>
 
@@ -184,7 +184,7 @@ function AgendaForm() {
         </label>
       </fieldset>
 
-      {/* CONFIRMACIÓN */}
+      
       <fieldset>
         <legend>Confirmación</legend>
 
@@ -199,7 +199,7 @@ function AgendaForm() {
         </label>
       </fieldset>
 
-      {/* Gestión de errores de envío */}
+      
       <ValidationError prefix="Error" errors={state.errors} />
 
       <button type="submit" className="submit-btn" disabled={state.submitting}>
